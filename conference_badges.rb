@@ -1,16 +1,12 @@
 def badge_maker(name)
     puts "Hello, my name is #{name}."
     return "Hello, my name is #{name}."
-
 end# Write your code here.
 
 def batch_badge_creator(badges)
-    length=badges.count;
     array=Array.new
-    count=0
-    until count==length
-        array=array.push(badge_maker(badges[count]))
-        count+=1
+    badges. each do |individuals|
+        array=array.push(badge_maker(individuals))
     end
     return array;
 
@@ -22,24 +18,18 @@ def room_messages (name, integer)
 end
 
 def assign_rooms(name)
-    length=name.count;
-    array=Array.new
-    count=0
+    array=[]
     room=1
-    until count==length
-        array=array.push(room_messages((name[count]),room))
-        count+=1
+    name.each do |attendes|
+        array=array.push(room_messages(attendes,room))
         room+=1
     end
     return array;
 end
 
 def printer(name)
-    count=0;
-    until count==name.count do
-    badge_maker(name[count])
-    
-        count+=1
-        end
+    name. each do|attendes|
+        badge_maker(attendes)
+    end
     assign_rooms(name)
 end
