@@ -15,21 +15,17 @@ end
 def assign_rooms(attendees)
   rooms = []
   attendees.each_with_index do |name, room|
-    rooms << "Hello, #{name}! You'll be assigned to room #{room + 1}!"
+    rooms << "Hello, #{name}! You'll be assigned to room #{room + 1}!" 
   end
-  rooms.sort
   rooms
 end
 
 def printer(attendees)
-  badges = batch_badge_creator(attendees)
-  rooms = assign_rooms(attendees)
-
-  badges.each do |i|
+  batch_badge_creator(attendees).each do |i|
     puts i
   end
 
-  rooms.each do |i|
+  assign_rooms(attendees).each do |i|
     puts i
   end
 end
