@@ -1,3 +1,5 @@
+names = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+
 def badge_maker(name)
   "Hello, my name is #{name}."
 end
@@ -12,9 +14,10 @@ end
 
 def assign_rooms(attendees)
   rooms = []
-  attendees.each_with_index do |element, i|
-    rooms << "Hello, #{element}! You'll be assigned to room #{i + 1}!"
+  attendees.each_with_index do |name, room|
+    rooms << "Hello, #{name}! You'll be assigned to room #{room + 1}!"
   end
+  rooms.sort
   rooms
 end
 
