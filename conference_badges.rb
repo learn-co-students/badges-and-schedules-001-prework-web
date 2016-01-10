@@ -16,13 +16,15 @@ def assign_rooms(speakers)
   #speakers.each_with_index {|speaker,index |
   #  speaker_rooms << "Hello, #{speaker}! You'll be assigned to room #{index+1}!"}
   #speaker_rooms
-  #speakers.each_with_index.map { |speaker,index |
-  #  "Hello, #{speaker}! You'll be assigned to room #{index+1}!"}
-  def assign_rooms(attendees)
-    new_arr = []
-    new_arr.push(attendees.each_with_index.collect {|name, index| "Hello, #{name}! You'll be assigned to room #{index+1}!"})
-    return new_arr
-  end
+  speakers.each_with_index.map { |speaker,index |
+    "Hello, #{speaker}! You'll be assigned to room #{index+1}!"}
+
+  ## just testing this to help another student
+  #def assign_rooms(attendees)
+  #  new_arr = []
+  #  new_arr.push(attendees.each_with_index.collect {|name, index| "Hello, #{name}! You'll be assigned to room #{index+1}!"})
+  #  return new_arr
+  #end
 
 end
 
