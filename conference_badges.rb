@@ -1,5 +1,3 @@
-speakers = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-
 def badge_maker(name)
   "Hello, my name is #{name}."
 end
@@ -13,8 +11,8 @@ end
 def assign_rooms(speakers)
   assignments = []
   speakers.each_with_index {|name, room|
-    assignments <<"Hello, #{name}! You'll be assigned to room #{room+1}!"}
-  assignments
+    assignments << "Hello, #{name}! You'll be assigned to room #{room+1}!"}
+   assignments
 end
 
 def printer(speakers)
