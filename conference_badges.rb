@@ -24,4 +24,3 @@ def printer(attendees)
     puts assign_rooms(attendees)[room]
   end
 end
-
