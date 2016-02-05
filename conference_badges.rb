@@ -1,10 +1,6 @@
 # Write your code here.
 
 #Creates a single badge based on the argument 'name'
-
-puts "Hello my name is Edgar"
-puts "Hello my name is Pearl"
-
 def badge_maker(name)
   return "Hello, my name is #{name}."
 end
