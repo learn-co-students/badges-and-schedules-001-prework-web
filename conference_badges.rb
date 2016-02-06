@@ -18,14 +18,6 @@ def assign_rooms(speakers)
   #speaker_rooms
   speakers.each_with_index.map { |speaker,index |
     "Hello, #{speaker}! You'll be assigned to room #{index+1}!"}
-
-  ## just testing this to help another student
-  #def assign_rooms(attendees)
-  #  new_arr = []
-  #  new_arr.push(attendees.each_with_index.collect {|name, index| "Hello, #{name}! You'll be assigned to room #{index+1}!"})
-  #  return new_arr
-  #end
-
 end
 
 def printer(speakers)
@@ -36,3 +28,32 @@ def printer(speakers)
   batch_badge_creator(speakers).each {|badge| puts badge}
   assign_rooms(speakers).each {|speaker| puts speaker}
 end
+
+#attendees = [1, 2]
+#name = 'mary'
+
+#def badge_maker (name)
+#  "Hello, my name is #{name}."
+#end# Write your code here.
+#
+#def batch_badge_creator (attendees)
+#  attendees.collect do |name| badge_maker (name)
+#  end
+#end
+#
+#def assign_rooms (attendees)
+#  attendees.each_with_index.collect do |name, index| "Hello, #{name}! You'll be assigned to room #{index + 1}!"
+#  end
+#end
+#
+#def printer (attendees)
+#  batch_badge_creator(attendees).each do |b| puts b
+#  end
+#  assign_rooms(attendees).each do |a| puts a
+#  end
+#end
+#
+#puts "\n#{badge_maker(name)}"
+#puts "\n#{batch_badge_creator(attendees)}"
+#puts "\n#{assign_rooms(attendees)}"
+#puts "\n#{printer(attendees)}"
