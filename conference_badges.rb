@@ -1,12 +1,11 @@
 attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
-badges = []
-room_assignments = []
 
 def badge_maker(name)
   "Hello, my name is #{name}."
 end
 
 def batch_badge_creator(attendees)
+  badges = []
   attendees.each {|name|
     badge = badge_maker(name)
     badges << badge}
@@ -14,6 +13,7 @@ def batch_badge_creator(attendees)
 end
 
 def assign_rooms(attendees)
+  room_assignments = []
   attendees.each_index {|index|
     room = "Hello, #{attendees[index]}! You'll be assigned to room #{index+1}!"
     room_assignments << room}
@@ -21,7 +21,6 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  attendees.each_index {|index|
-    puts badges[index]
-    puts room_assignments[index]}
+  batch_badge_creator(attendees).each {|badge| puts badge}
+  assign_rooms(attendees).each {|room| puts room}
 end
