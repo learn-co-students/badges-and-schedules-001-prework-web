@@ -26,11 +26,15 @@ def assign_rooms (array)
   end
 
 return list2
-
-
 end
 
 def printer (array)
-  puts batch_badge_creator(array)
-  puts assign_rooms(array)
+  final_list1 = batch_badge_creator(array) + assign_rooms(array)
+ 
+  idx = 0
+  while idx < final_list1.length
+    puts final_list1[idx]
+    idx+=1
+  end
+
 end
