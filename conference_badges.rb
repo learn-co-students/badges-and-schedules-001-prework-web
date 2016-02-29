@@ -23,12 +23,12 @@ def assign_rooms(sp_list)
 end
 
 def printer(name_assign)
-  # set new variables equal to batch_basge_creator and assign_rooms to store their output values
+  # set new variables equal to batch_basge_creator and assign_rooms to store their return values
   badges = batch_badge_creator(name_assign)
   rooms = assign_rooms(name_assign)
   # print each element of returned values from batch_badge_creator and assign_rooms
   badges.each{|badge| puts badge}
   rooms.each{|assign| puts assign}
 end
-# call printer passing sp_list
+# call printer passing sp_list - therefore printing badge_batch_creator and assign_rooms to each element in the sp_list array
 printer(sp_list)
