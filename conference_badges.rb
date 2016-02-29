@@ -28,7 +28,7 @@ def assign_rooms(array, array1)
 end
 
 
-#Theoretical of what #print would look like if I was abale to degine #assign_rooms correctly
+#Theoretical of what #print would look like if I was able to design #assign_rooms correctly
 
 def printer(array)
   assign_rooms
