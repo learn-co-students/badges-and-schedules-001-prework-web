@@ -19,12 +19,16 @@ def assign_rooms (attendees)
   end
 end
 
+def printer(attendees)
+  batch_badge_creator(attendees).each do |i|
+    puts i
+  end
+  assign_rooms(attendees).each do |i|
+    puts i
+  end
+end
 
-# my preferred way of doing the example below, but wasn't excepted by rspec 
-#def printer (attendees)
-  #puts list = [batch_badge_creator(attendees), assign_rooms(attendees)]
-#end
-
+=begin
 def printer (attendees)
    attendees.collect do |i|
    puts "Hello, my name is #{i}."
@@ -33,3 +37,4 @@ def printer (attendees)
     puts "Hello, #{i}! You'll be assigned to room #{index + 1}!"
   end
 end
+=end
