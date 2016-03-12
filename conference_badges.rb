@@ -33,4 +33,4 @@ def printer(abc)
     puts "Hello, #{i}! You'll be assigned to room #{abc.index(i)+1}!"
   end
 end
-  # Write your code here.
+  # Write your code here
