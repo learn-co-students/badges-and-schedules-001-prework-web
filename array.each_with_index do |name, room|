@@ -1,0 +1,6 @@
+ array.each_with_index do |name, room|
+        array_with_room.push("Hello #{name}! You'll be assigned to room #{room}!")
+        end
+
+        nums.each do |num|
+2.2.3 :015 >         puts num
