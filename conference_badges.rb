@@ -14,7 +14,7 @@ end
 def assign_rooms(participants)
   rooms = Array.new
   i = 0
-  attendees.each do |name|
+  participants.each do |name|
     i += 1
     rooms << "Hello, #{name}! You'll be assigned to room #{i}!"
   end
