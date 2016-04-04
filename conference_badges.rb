@@ -5,32 +5,28 @@ def badge_maker(name)
 end 
 
 def batch_badge_creator(array)
-	ind=0
-	arr=[]
-	while ind < array.size
-		arr.push badge_maker(array[ind])
-		ind+=1
+	result=[]
+	array.each do |i|
+		result << badge_maker(i)
 	end 	
-		 arr
+	result
 end 
 
 
 def assign_rooms(array)
-	ind=0
 	result=[]
-	while ind<array.size 
-		result.push "Hello, #{array[ind]}! You'll be assigned to room #{ind+1}!"
-		ind+=1
+	array.each_with_index do |name, room|
+		result.push "Hello, #{name}! You'll be assigned to room #{room+1}!"
 	end 
 	result
 end
 
 def printer(attendees)
-	
-		puts batch_badge_creator(attendees).join(" ")
-	
-	
-		 puts assign_rooms(attendees).join(" ")
-	
+	batch_badge_creator(attendees).each do |name|
+		puts name 
+	end 
+	assign_rooms(attendees).each do |room|
+		puts room 
+	end 
 end
 
