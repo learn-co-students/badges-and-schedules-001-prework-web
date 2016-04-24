@@ -15,7 +15,7 @@ def assign_rooms(array)
   array.each_with_index { |name, room| name_room[name] = room}
   name_room.to_a.each do |assign|
   assign_array << "Hello, #{assign[0]}! You'll be assigned to room #{assign[1] +1}!"
-end
+  end
 assign_array
 end
 
