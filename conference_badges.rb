@@ -2,7 +2,6 @@ def badge_maker(name)
   x="Hello, my name is #{name}."
 end
 
-attendees=['Edsger', 'Ada', 'Charles', 'Alan', 'Grace', 'Linus', 'Matz']
 def batch_badge_creator(attendees)
   arr_badge_mess=[]
   attendees.each {|x| arr_badge_mess << badge_maker(x)}
