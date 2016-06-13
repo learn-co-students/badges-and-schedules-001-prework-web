@@ -5,16 +5,14 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  new_array = []
-  new_array = attendees.collect{ |name|
+  attendees.collect{ |name|
     badge_maker(name)
   }
 
 end
 
 def assign_rooms(attendees)
-  new_array = []
-  new_array = attendees.collect { |name|
+  attendees.collect { |name|
     index = attendees.index(name) + 1
     "Hello, #{name}! You'll be assigned to room #{index}!"
   }
