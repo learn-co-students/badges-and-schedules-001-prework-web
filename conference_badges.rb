@@ -18,12 +18,12 @@ def assign_rooms(arg)
 	return newarray
 end
 
-def printer(attendees)
-  batch_badge_creator(attendees).each do |badge|
-    puts badge
+def printer(arg)
+  batch_badge_creator(attendees).each do |n|
+    puts n
   end
 
-  assign_rooms(attendees).each do |assignment|
-    puts assignment
+  assign_rooms(attendees).each do |n|
+    puts n
   end
 end
