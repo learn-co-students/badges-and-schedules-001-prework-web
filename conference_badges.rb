@@ -13,7 +13,8 @@ def assign_rooms(attendees)
 end
 
 
-#OMG, I actually figured this shit out! I thought I would die. Here is where I found it: http://blog.teamtreehouse.com/ruby-arrays
+#OMG, I actually figured this shit out! I thought I would die. So much simpler than I thought. Just do what is asked. Computers are stupid
+# You can only ask them to do one thing at a time. If they don't have the info, the code breaks. OK. Here is where I found the light: http://blog.teamtreehouse.com/ruby-arrays
 def printer(attendees)
 batch_badge_creator(attendees).each_with_index do |badges|
   puts badges
