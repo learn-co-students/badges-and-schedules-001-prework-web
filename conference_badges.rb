@@ -2,23 +2,15 @@ def badge_maker (name)
   return "Hello, my name is #{name}."
 end
 
-def batch_badge_creator (guest)
-  guest.map {|x|"Hello, my name is #{x}."}
+def batch_badge_creator (array)
+    array.map {|i| "Hello, my name is #{i}."}
 end
 
-def assign_rooms (person)
-  room = 0
-  person.collect do |guest|
-    room += 1
-    "Hello, #{guest}! You'll be assigned to room #{room}!"
-  end
+def assign_rooms (array)
+  array.map.with_index {|name, i| "Hello, #{name}! You'll be assigned to room #{i + 1}!"}
 end
 
-def printer (prints)
-  batch_badge_creator(prints).each do |data|
-    puts data
-  end
-  assign_rooms(prints).each do |data|
-    puts data
-  end
+def printer (name)
+  batch_badge_creator(name).each {|i| puts i}
+  assign_rooms(name).each {|i| puts i}
 end
