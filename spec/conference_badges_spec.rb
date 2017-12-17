@@ -96,7 +96,7 @@ TEXT
 
     it 'should puts the list of badges and room_assignments' do
       badges_and_room_assignments.each_line do |line|
-        # $stdout is a Ruby global varibale that represents the current standard output.
+        # $stdout is a Ruby global variable that represents the current standard output.
         # In this case, the standard output is your terminal screen. This test, then,
         # is checking to see whether or not your terminal screen receives the correct
         # printed output.
